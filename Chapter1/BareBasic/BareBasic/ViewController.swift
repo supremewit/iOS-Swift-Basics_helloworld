@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  BareBasic
 //
-//  Created by Lingostar on 2015. 10. 28..
-//  Copyright © 2015년 CodersHigh. All rights reserved.
+//  Created by Segaon_PC on 2017. 10. 30..
+//  Copyright © 2017년 CodersHigh. All rights reserved.
 //
 
 import UIKit
