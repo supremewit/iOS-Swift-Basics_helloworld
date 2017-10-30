@@ -2,59 +2,59 @@
 //  Money.swift
 //  MoneyConverter
 //
-//  Created by Lingostar on 2015. 12. 17..
-//  Copyright © 2015년 CodersHigh. All rights reserved.
+//  Created by Segaon_PC on 2017. 10. 23..
+//  Copyright © 2017년 Segaon_PC. All rights reserved.
 //
 
 import Foundation
-import MapKit
-enum Currency:Int {
+
+
+enum Currency: Int {
     case USD = 0, KRW, JPY, EUR
     
-    var symbol:String {
-        get {
+    
+    var ratio: Double {
+        get{
             switch self {
-            case .USD : return "$"
-            case .KRW : return "₩"
-            case .JPY : return "¥"
-            case .EUR : return "€"
+            case .USD: return 1.0
+            case .KRW: return 1178.5
+            case .JPY: return 122.45
+            case .EUR: return 0.92
             }
         }
     }
     
-    var ratio:Double {
+    var symbol: String {
         get {
             switch self {
-            case .USD : return 1.0
-            case .KRW : return 1178.5
-            case .JPY : return 122.45
-            case .EUR : return 0.92
-            }
+            case .USD: return "$"
+            case .KRW: return "₩"
+            case .JPY: return "¥"
+            case .EUR: return "€"
         }
     }
+    }
+    
+    
 }
 
 struct Money {
     
-    //var location:CLLocationCoordinate2D
+    var usDollar = 0.0
     
-    var usdollar = 0.0
-    
-    init(_ _usdollar:Double){
-        usdollar = _usdollar
+    init(_ _usdollar:Double) {
+        usDollar = _usdollar
     }
     
-    init(_ amount:Double, currency:Currency){
-        usdollar = amount / currency.ratio
+    init(_ amount: Double, currency: Currency) {
+        usDollar = amount / currency.ratio
     }
-
-    func valueInCurrency(currency:Currency) -> String {
-        return "\(currency.symbol) " + "\(usdollar*currency.ratio)"
+    
+    func valueInCurrency(currency: Currency) -> String {
+        return "\(currency.symbol)" + "\(usDollar * currency.ratio)"
     }
 }
 
 
-let money = Money(120.0)
-let koreanIncome = Money(500_000 , currency:.KRW)
-
-
+let myMoney = Money(120)
+let incomeInKRW = Money(350_000, currency: .KRW)
