@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  MeetingRooms
 //
-//  Created by Lingostar on 2015. 12. 23..
-//  Copyright © 2015년 CodersHigh. All rights reserved.
+//  Created by Segaon_PC on 2017. 10. 3..
+//  Copyright © 2017년 Segaon_PC. All rights reserved.
 //
 
 import UIKit
