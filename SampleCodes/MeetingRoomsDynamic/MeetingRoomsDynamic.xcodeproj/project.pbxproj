@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,7 +17,7 @@
 		2C9C276F1C958848002525E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9C276D1C958848002525E4 /* Main.storyboard */; };
 		2C9C27711C958849002525E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C9C27701C958849002525E4 /* Assets.xcassets */; };
 		2C9C27741C958849002525E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9C27721C958849002525E4 /* LaunchScreen.storyboard */; };
-		2C9C277C1C9588BE002525E4 /* MeetingRoomsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C277B1C9588BE002525E4 /* MeetingRoomsListController.swift */; };
+		2C9C277C1C9588BE002525E4 /* MeetingRoomsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C277B1C9588BE002525E4 /* MeetingRoomsListViewController.swift */; };
 		2CAA1EF41CB3F36D0096F3FA /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA1EF31CB3F36D0096F3FA /* DataCenter.swift */; };
 		2CAA1EF61CB3FA630096F3FA /* BranchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA1EF51CB3FA630096F3FA /* BranchListViewController.swift */; };
 		2CAA1EF81CB3FA7C0096F3FA /* ServiceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA1EF71CB3FA7C0096F3FA /* ServiceListViewController.swift */; };
@@ -36,7 +36,7 @@
 		2C9C27701C958849002525E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C9C27731C958849002525E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C9C27751C958849002525E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C9C277B1C9588BE002525E4 /* MeetingRoomsListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingRoomsListController.swift; sourceTree = "<group>"; };
+		2C9C277B1C9588BE002525E4 /* MeetingRoomsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingRoomsListViewController.swift; sourceTree = "<group>"; };
 		2CAA1EF31CB3F36D0096F3FA /* DataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
 		2CAA1EF51CB3FA630096F3FA /* BranchListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchListViewController.swift; sourceTree = "<group>"; };
 		2CAA1EF71CB3FA7C0096F3FA /* ServiceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceListViewController.swift; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 				2C9C27691C958848002525E4 /* AppDelegate.swift */,
 				2CAA1EF51CB3FA630096F3FA /* BranchListViewController.swift */,
 				2CAA1EF71CB3FA7C0096F3FA /* ServiceListViewController.swift */,
-				2C9C277B1C9588BE002525E4 /* MeetingRoomsListController.swift */,
+				2C9C277B1C9588BE002525E4 /* MeetingRoomsListViewController.swift */,
 				2CAA1EF31CB3F36D0096F3FA /* DataCenter.swift */,
 				2C6F670F1CC233F5007EAEC7 /* RoomInfoViewController.swift */,
 				2C6F67111CC342F3007EAEC7 /* ReservationListViewController.swift */,
@@ -127,7 +127,7 @@
 				};
 			};
 			buildConfigurationList = 2C9C27611C958847002525E4 /* Build configuration list for PBXProject "MeetingRoomsDynamic" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -168,7 +168,7 @@
 				2C5B2DAA1CC726B8007D75DD /* EquipmentsListViewController.swift in Sources */,
 				2C6F67141CC34BDF007EAEC7 /* ReserveRoomViewController.swift in Sources */,
 				2CAA1EF41CB3F36D0096F3FA /* DataCenter.swift in Sources */,
-				2C9C277C1C9588BE002525E4 /* MeetingRoomsListController.swift in Sources */,
+				2C9C277C1C9588BE002525E4 /* MeetingRoomsListViewController.swift in Sources */,
 				2CAA1EF61CB3FA630096F3FA /* BranchListViewController.swift in Sources */,
 				2C9C276A1C958848002525E4 /* AppDelegate.swift in Sources */,
 				2C6F67101CC233F5007EAEC7 /* RoomInfoViewController.swift in Sources */,
@@ -234,7 +234,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -273,7 +273,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -286,9 +286,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MeetingRoomsDynamic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codershigh.MeetingRoomsDynamic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -297,9 +299,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MeetingRoomsDynamic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codershigh.MeetingRoomsDynamic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

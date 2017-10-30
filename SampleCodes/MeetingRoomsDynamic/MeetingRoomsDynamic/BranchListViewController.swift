@@ -14,19 +14,19 @@ class BranchListViewController: UITableViewController {
         self.title = "지점"
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         let rowCount = dataCenter.branches.count
         return rowCount
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("BranchCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BranchCell", for: indexPath as IndexPath)
         
         let branch = dataCenter.branches[indexPath.row]
         cell.textLabel?.text = branch.name
