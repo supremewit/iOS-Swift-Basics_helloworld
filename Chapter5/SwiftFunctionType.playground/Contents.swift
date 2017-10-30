@@ -4,9 +4,9 @@ import UIKit
 
 //: Session 5-1 Function Types
 
-/*func addVAT(source:Double) -> Double {
+func addVAT(source:Double) -> Double {
     return source * 1.1
-}*/
+}
 
 func couponDiscount(source:Double) -> Double {
     return source * 0.9
@@ -16,7 +16,7 @@ func couponDiscount(source:Double) -> Double {
 var additional:(Double) -> Double
 
 let transcation3219 = 120.7
-additional = addVAT
+additional() = addVAT()
 
 let price3219 = additional(transcation3219)
 
@@ -27,7 +27,7 @@ func finalPrice(source:Double, additional:(Double) -> Double) -> Double {
     return price
 }
 
-let price3220 = finalPrice(350.0, additional: couponDiscount)
+let price3220 = finalPrice(source: 350.0, additional: couponDiscount)
 
 
 //: Session 5-2 Closure
@@ -128,7 +128,7 @@ func ascendantSort (sort1:Double, sort2:Double) -> Bool {
     return sort1 > sort2
 }
 
-let sortedPrices = vatPrices.sort(ascendantSort)
+let sortedPrices = vatPrices.sorted(by:ascendantSort)
 let sortedPrices2 = vatPrices.sort({ sort1, sort2 in
     return sort1 > sort2
 })
