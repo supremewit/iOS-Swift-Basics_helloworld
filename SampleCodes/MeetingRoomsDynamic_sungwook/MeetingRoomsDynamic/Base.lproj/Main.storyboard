@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="asX-Vs-qJH" id="aQW-fG-hkz">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -82,7 +82,7 @@
         <!--MeetingRooms-->
         <scene sceneID="W7T-dj-o5j">
             <objects>
-                <tableViewController id="uH2-dd-AJf" customClass="MeetingRoomsListViewController" sceneMemberID="viewController">
+                <tableViewController id="uH2-dd-AJf" customClass="MeetingRoomsListController" customModule="MeetingRoomsDynamic" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="YTL-Ss-ks9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -295,7 +295,7 @@
                     <navigationItem key="navigationItem" title="Banksy 정보" id="aTW-og-AQo">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="ujf-Fr-PXm">
                             <connections>
-                                <action selector="dismissModal:" destination="9J6-GQ-1ty" id="tX6-Ag-m5b"/>
+                                <action selector="modalDismiss:" destination="9J6-GQ-1ty" id="ifN-hE-lOO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -679,6 +679,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Si5-sX-tRH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="9mO-4t-wLi">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>

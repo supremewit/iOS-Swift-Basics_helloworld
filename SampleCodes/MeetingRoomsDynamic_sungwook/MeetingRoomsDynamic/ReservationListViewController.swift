@@ -1,15 +1,18 @@
 //
-//  RoomInfoViewController.swift
+//  ReservationListViewController.swift
 //  MeetingRoomsDynamic
 //
-//  Created by Lingostar on 2016. 4. 16..
+//  Created by Lingostar on 2016. 4. 17..
 //  Copyright © 2016년 CodersHigh. All rights reserved.
 //
 
 import UIKit
 
-class RoomInfoViewController: UITableViewController {
+class ReservationListViewController: UITableViewController {
 
+    var meetingRoom:MeetingRoom?
+    var newReservation:Reservation?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,37 +23,50 @@ class RoomInfoViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func dismissModal(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
-}
-
+    func addNewItem(reservation:Reservation) {
+        if (self.meetingRoom?.reservations?.append(reservation)) == nil {
+            self.meetingRoom?.reservations = [reservation]
+        }
+        dataCenter.save()
+        
+        self.tableView.reloadData()
+        
+    }
+    
+    @IBAction func unwindToReserveList(segue:UIStoryboardSegue) {
+        print("unwind")
+    }
+    
     // MARK: - Table view data source
-    /*
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }*/
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let rowCount = meetingRoom?.reservations?.count else {
+            return 0
+        }
+        return rowCount
+    }
 
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReservationCell", for: indexPath)
 
-        // Configure the cell...
-
+        guard let reservation = meetingRoom?.reservations?[indexPath.row] else {
+            return cell
+        }
+        cell.textLabel?.text = reservation.date.description
+        cell.detailTextLabel?.text = reservation.hostName
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
